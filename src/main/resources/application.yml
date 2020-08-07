@@ -1,0 +1,19 @@
+server:  port: 8088
+spring:
+  application:
+    name: frontend-authentication
+
+# Oracle DB Settings  datasource:    url: jdbc:oracle:thin:@172.21.21.27:1521:FCUATDB
+    username: jdbsmsuat
+    password: uatsms#27
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:      connection-timeout: 30000
+      minimum-idle: 10
+      maximum-pool-size: 10
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      auto-commit: true
+      pool-name: Front-End-Authentication
+#----------euraka client register config
+eureka:  client:    serviceUrl:      defaultZone: http://localhost:8080/eureka/    registerWithEureka: true
